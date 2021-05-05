@@ -1,0 +1,16 @@
+@import "../utils/mixins";
+
+
+.omf-button {
+  border-radius: 3em;
+  width: 14em;
+  height: 3em;
+  background: linear-gradient(darken($color-secondary,20) 30%, lighten($color-tertiary,10) 100%);
+  @include center-element;
+  @include shadow-box;
+
+    .omf-button__content {
+      color: $text-color-primary;
+      @include center-element;
+    }
+}
