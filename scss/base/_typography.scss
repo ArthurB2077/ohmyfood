@@ -3,3 +3,10 @@
 
 $roboto:'Roboto', sans-serif;
 $shrikhand:'Shrikhand', cursive;
+
+body {
+  font-family: $roboto;
+  .title {
+    font-family: $shrikhand;
+  }
+}
