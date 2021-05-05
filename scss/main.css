@@ -19,11 +19,15 @@ html {
   border-radius: 3em;
   width: 14em;
   height: 3em;
-  background: linear-gradient(#ff13be 30%, #ae80e5 100%);
+  background: linear-gradient(#ff7edb 0%, #ff13be 100%);
   display: flex;
   justify-content: center;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.omf-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  background: #FF79DA;
 }
 .omf-button .omf-button__content {
   color: white;
