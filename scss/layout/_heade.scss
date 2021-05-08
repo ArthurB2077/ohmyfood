@@ -1,0 +1,14 @@
+@import "../utils/mixins";
+
+.omf-header {
+  .omf-header__content {
+    @include center-element;
+  }
+  .omf-header__position {
+    @include center-element;
+    background-color: $bg-color-secondary;
+  }
+  .omf-header__text{
+    text-align: center;
+  }
+}

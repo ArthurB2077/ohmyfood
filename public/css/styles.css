@@ -15,6 +15,15 @@ html {
   box-sizing: inherit;
 }
 
+.omf-header .omf-header__content {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.omf-header .omf-header__text {
+  text-align: center;
+}
+
 .omf-button {
   border-radius: 3em;
   width: 14em;
@@ -36,4 +45,4 @@ html {
   margin: auto;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */
