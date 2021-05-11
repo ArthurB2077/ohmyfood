@@ -2,11 +2,21 @@
 
 .omf-header {
   .omf-header__content {
-    @include center-element;
+    @include center-element(3em);
+    @include shadow-box(0.15);
+    margin-bottom: 0.15em;
+    .omf-header__logo {
+      margin: 0.5em;
+    }
   }
   .omf-header__position {
-    @include center-element;
+    @include center-element(2em);
     background-color: $bg-color-secondary;
+    white-space: nowrap;
+    i {
+      line-height: inherit;
+      margin-right: 1em;
+    }
   }
   .omf-header__text{
     text-align: center;

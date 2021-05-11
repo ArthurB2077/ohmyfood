@@ -3,17 +3,16 @@
 .omf-button {
   border-radius: 3em;
   width: 14em;
-  height: 3em;
   background: linear-gradient(lighten($color-secondary,1) 0%, darken($color-secondary,20) 100%);
   &:hover{
     @include shadow-box(0.30);
     background: $color-secondary;
   }
-  @include center-element;
+  @include center-element(3em);
   @include shadow-box;
 
     .omf-button__content {
       color: $text-color-primary;
-      @include center-element;
+      @include center-element(1em);
     }
 }

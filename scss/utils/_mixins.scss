@@ -1,8 +1,9 @@
-@mixin center-element {
+@mixin center-element ($vertical-parmater) {
   display: flex;
   justify-content: center;
-  vertical-align: center;
   margin: auto;
+  height: $vertical-parmater;
+  line-height: $vertical-parmater !important;
 }
 
 @mixin shadow-box ($shadow-scope:0.15) {
