@@ -19,26 +19,6 @@ html {
   display: flex;
   justify-content: center;
   margin: auto;
-  height: 3em;
-  line-height: 3em !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-  margin-bottom: 0.15em;
-}
-.omf-header .omf-header__content .omf-header__logo {
-  margin: 0.5em;
-}
-.omf-header .omf-header__position {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  height: 2em;
-  line-height: 2em !important;
-  background-color: #eaeaea;
-  white-space: nowrap;
-}
-.omf-header .omf-header__position i {
-  line-height: inherit;
-  margin-right: 1em;
 }
 .omf-header .omf-header__text {
   text-align: center;
@@ -47,12 +27,11 @@ html {
 .omf-button {
   border-radius: 3em;
   width: 14em;
+  height: 3em;
   background: linear-gradient(#ff7edb 0%, #ff13be 100%);
   display: flex;
   justify-content: center;
   margin: auto;
-  height: 3em;
-  line-height: 3em !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 }
 .omf-button:hover {
@@ -64,8 +43,6 @@ html {
   display: flex;
   justify-content: center;
   margin: auto;
-  height: 1em;
-  line-height: 1em !important;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=styles.css.map */

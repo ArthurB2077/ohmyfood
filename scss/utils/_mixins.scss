@@ -1,0 +1,11 @@
+@mixin center-element ($vertical-parmater) {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: $vertical-parmater;
+  line-height: $vertical-parmater !important;
+}
+
+@mixin shadow-box ($shadow-scope:0.15) {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, $shadow-scope);
+}
