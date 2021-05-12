@@ -1,5 +1,5 @@
-@mixin center-element ($vertical-parmater) {
-  display: flex;
+@mixin center-element ($vertical-parmater,$display: flex) {
+  display: $display;
   justify-content: center;
   margin: auto;
   height: $vertical-parmater;
@@ -8,4 +8,31 @@
 
 @mixin shadow-box ($shadow-scope:0.15) {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, $shadow-scope);
+}
+
+@mixin position ($index, $position, $top, $left) {
+  z-index: $index;
+  position: $position;
+  left: $top;
+  top: $left;
+}
+
+@mixin section-list {
+  border-spacing: 2em;
+  h2 {
+    margin-left: 1.5em;
+    margin-top: 2.5em;
+  }
+  .omf-section__list-cards {
+    @include desktop-only {
+      display: flex;
+      justify-content: space-evenly;
+    };
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
 }
