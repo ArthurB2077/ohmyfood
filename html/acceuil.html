@@ -13,7 +13,7 @@
 
 <div id="loader"></div>
 
-<div style="display:none;" id="myDiv" class="animate-bottom">
+<div style="display:none;" id="pageContent" class="animate-bottom">
   <header class="omf-header">
     <div class="omf-header__title">
       <img class="omf-header__logo" src="../public/images/logo/ohmyfood@2x.svg" alt="Logo de l'entreprise Ohmyfood">
@@ -114,15 +114,15 @@
 </div>
 
 <script>
-  let myVar;
+  let animate;
 
   function spinningLoader() {
-    myVar = setTimeout(showPage, 2000);
+    animate = setTimeout(showPage, 2000);
   }
 
   function showPage() {
     document.getElementById("loader").style.display = "none";
-    document.getElementById("myDiv").style.display = "block";
+    document.getElementById("pageContent").style.display = "block";
   }
 </script>
 

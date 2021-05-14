@@ -135,9 +135,46 @@ body {
   margin-right: 30%;
 }
 .omf-header-menu .omf-hader-menu__content img {
-  height: 15em;
+  height: 20em;
   width: 100%;
   object-fit: cover;
+}
+
+.omf-button {
+  border-radius: 3em;
+  width: 14em;
+  background: linear-gradient(#ff7edb 0%, #ff13be 100%);
+  margin-top: 2em !important;
+  margin-bottom: 3em !important;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 3em;
+  line-height: 3em !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.omf-button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  background: #FF79DA;
+}
+.omf-button .omf-button__content {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 1em;
+  line-height: 1em !important;
+}
+
+.omf-section3 {
+  z-index: 1;
+  position: relative;
+  left: 0;
+  top: -80px;
+  height: 100%;
+  background-color: #eaeaea;
+  border-top-right-radius: 2.5em;
+  border-top-left-radius: 2.5em;
 }
 
 .omf-button {
@@ -396,7 +433,7 @@ body {
     opacity: 1;
   }
 }
-#myDiv {
+#pageContent {
   display: none;
   text-align: center;
 }
