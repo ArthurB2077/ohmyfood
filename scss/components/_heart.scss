@@ -1,0 +1,10 @@
+.fa-heart {
+  &:hover{
+    color: $color-secondary;
+    display: none;
+  }
+}
+
+.heart-fill {
+  display: none;
+}
