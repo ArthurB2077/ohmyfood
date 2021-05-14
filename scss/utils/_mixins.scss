@@ -1,4 +1,4 @@
-@mixin center-element ($vertical-parmater,$display: flex) {
+@mixin center-element ($vertical-parmater,$display: flex, $justify: center) {
   display: $display;
   justify-content: center;
   margin: auto;
