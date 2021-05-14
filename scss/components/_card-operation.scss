@@ -1,0 +1,40 @@
+@import "../utils/mixins";
+
+.omf-section1__card_operation {
+  @include center-element(1em);
+  @include shadow-box(0.05);
+  border-radius: 1em;
+  background-color: $bg-color-secondary;
+  width: 22em;
+  height: 5em;
+  z-index: 0;
+  margin-top: 2em !important;
+  margin-bottom: 2em !important;
+  &:hover {
+    background: lighten($color-tertiary, 30%);
+  }
+  .omf-section1__numbercircle {
+    @include position(1, relative,-0.7em,1.8em );
+    display: flex;
+    justify-content: center;
+    background-color: $color-tertiary;
+    color: $text-color-primary;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+  }
+  p {
+    @include center-element(1em);
+    font-size: 20px;
+  }
+  span {
+    @include center-element(10px);
+    font-size: 10px;
+  }
+  i {
+    @include position(1, relative, 1.2em, 1.5em );
+  }
+  .fa-mobile-alt {
+    margin-right: 25px;
+  }
+}

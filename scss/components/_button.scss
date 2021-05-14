@@ -4,6 +4,8 @@
   border-radius: 3em;
   width: 14em;
   background: linear-gradient(lighten($color-secondary,1) 0%, darken($color-secondary,20) 100%);
+  margin-top: 2em !important;
+  margin-bottom: 3em !important;
   &:hover{
     @include shadow-box(0.30);
     background: $color-secondary;

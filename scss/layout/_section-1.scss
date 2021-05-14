@@ -1,0 +1,5 @@
+@import "../utils/mixins";
+
+.omf-section1 {
+  @include section-list;
+}
