@@ -1,106 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-body {
-  font-family: "Roboto", sans-serif;
-}
-body .title {
-  font-family: "Shrikhand", cursive;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-.omf-header .omf-header__content {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  height: 3em;
-  line-height: 3em !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-  margin-bottom: 0.15em;
-}
-.omf-header .omf-header__content .omf-header__logo {
-  margin: 0.5em;
-}
-.omf-header .omf-header__position {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  height: 2em;
-  line-height: 2em !important;
-  background-color: #eaeaea;
-  white-space: nowrap;
-}
-.omf-header .omf-header__position i {
-  line-height: inherit;
-  margin-right: 1em;
-}
-.omf-header .omf-header__text {
-  text-align: center;
-}
-
-.omf-footer {
-  background-color: #353535;
-  color: white;
-  padding: 2em;
-}
-.omf-footer #omf-footer__logo {
-  fill: white;
-  margin-bottom: 15px;
-}
-.omf-footer .omf-footer__text {
-  display: flex;
-  align-items: baseline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.omf-footer .omf-footer__text i {
-  margin-right: 10px;
-}
-.omf-footer .omf-footer__text .fa-hands-helping {
-  margin-right: 5px !important;
-}
-.omf-footer .omf-footer__text p {
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-.omf-footer p {
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-
-.omf-button {
-  border-radius: 3em;
-  width: 14em;
-  background: linear-gradient(#ff7edb 0%, #ff13be 100%);
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  height: 3em;
-  line-height: 3em !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-}
-.omf-button:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-  background: #FF79DA;
-}
-.omf-button .omf-button__content {
-  color: white;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  height: 1em;
-  line-height: 1em !important;
-}
+@import "../utils/variables";
 
 /* Center the loader */
 #loader {
-  color: #FF79DA;
+  color: $color-secondary;
   font-size: 90px;
   border-radius: 50%;
   position: absolute;
@@ -116,15 +18,16 @@ html {
   -webkit-animation: load 1.7s infinite ease, round 1.7s infinite ease;
   animation: load 1.7s infinite ease, round 1.7s infinite ease;
 }
-
 @-webkit-keyframes load {
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-  5%, 95% {
+  5%,
+  95% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-  10%, 59% {
+  10%,
+  59% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
   }
   20% {
@@ -141,10 +44,12 @@ html {
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-  5%, 95% {
+  5%,
+  95% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
-  10%, 59% {
+  10%,
+  59% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
   }
   20% {
@@ -177,47 +82,27 @@ html {
     transform: rotate(360deg);
   }
 }
+
 /* Add animation to "page content" */
 .animate-bottom {
   position: relative;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
-  animation-duration: 1s;
+  animation-duration: 1s
 }
 
 @-webkit-keyframes animatebottom {
-  from {
-    bottom: -100px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0; opacity:1 }
 }
+
 @keyframes animatebottom {
-  from {
-    bottom: -100px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
 }
+
 #myDiv {
   display: none;
   text-align: center;
 }
-
-.fa-heart:hover {
-  color: #FF79DA;
-  display: none;
-}
-
-.heart-fill {
-  display: none;
-}
-
-/*# sourceMappingURL=main.css.map */
