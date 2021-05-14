@@ -1,0 +1,11 @@
+@import "../utils/mixins";
+@import "../components/button";
+
+
+.omf-section3 {
+  @include position(1, relative, 0, -80px );
+  height: 100%;
+  background-color: $bg-color-secondary;
+  border-top-right-radius: 2.5em;
+  border-top-left-radius: 2.5em;
+}
