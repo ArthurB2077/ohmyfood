@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -166,6 +168,13 @@ body {
   line-height: 1em !important;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+body .title {
+  font-family: "Shrikhand", cursive;
+}
+
 .omf-section3 {
   z-index: 1;
   position: relative;
@@ -175,6 +184,20 @@ body {
   background-color: #eaeaea;
   border-top-right-radius: 2.5em;
   border-top-left-radius: 2.5em;
+}
+.omf-section3 .omf-section3__title {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 3em;
+  line-height: 3em !important;
+  align-items: baseline;
+}
+.omf-section3 .omf-section3__title h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: normal;
+  margin-right: 3em;
 }
 
 .omf-button {
@@ -438,13 +461,42 @@ body {
   text-align: center;
 }
 
-.fa-heart:hover {
-  color: #FF79DA;
-  display: none;
+.heart-container {
+  position: relative;
+  top: 3px;
+  left: -25px;
+}
+.heart-container .icon {
+  width: 24px;
+  height: 24px;
+}
+.heart-container .icon path {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 15px;
+  stroke-dasharray: 1560;
+  stroke-dashoffset: 0;
+}
+.heart-container .icon path:hover {
+  animation: heart-fill 2s linear forwards;
 }
 
-.heart-fill {
-  display: none;
+@keyframes heart-fill {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1560;
+  }
+  80% {
+    stroke-dashoffset: 3120;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3120;
+    fill: #FF79DA;
+    stroke: transparent;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
