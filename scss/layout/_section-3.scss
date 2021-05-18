@@ -1,5 +1,6 @@
 @import "../utils/mixins";
 @import "../components/button";
+@import "../base/typography";
 
 
 .omf-section3 {
@@ -8,4 +9,14 @@
   background-color: $bg-color-secondary;
   border-top-right-radius: 2.5em;
   border-top-left-radius: 2.5em;
+  .omf-section3__title {
+    @include center-element(3em);
+    align-items: baseline;
+    h1 {
+      font-family: $shrikhand;
+      font-size: 28px;
+      font-weight: normal;
+      margin-right: 3em;
+    }
+  }
 }

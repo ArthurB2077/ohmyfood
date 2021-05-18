@@ -1,10 +1,41 @@
-.fa-heart {
-  &:hover{
-    color: $color-secondary;
-    display: none;
+@import "../utils/mixins";
+
+.heart-container {
+  position: relative;
+  top: 3px;
+  left: -25px;
+  .icon {
+    width:24px;
+    height:24px;
+    path {
+      fill: transparent;
+      stroke: $text-color-secondary;
+      stroke-width: 15px;
+      stroke-dasharray: 1560;
+      stroke-dashoffset: 0;
+      &:hover {
+        animation: heart-fill 2s linear forwards;
+      }
+    }
   }
 }
 
-.heart-fill {
-  display: none;
+@keyframes heart-fill {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 1560;
+  }
+
+  80% {
+    stroke-dashoffset: 3120;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3120;
+    fill: $color-secondary;
+    stroke: transparent;
+  }
 }
