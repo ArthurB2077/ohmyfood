@@ -1,124 +1,220 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>0hmyfood - A la française</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Setting the viewport to make your website look good on all devices-->
-    <link href="../fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
-    <link href="../scss/main.css" rel="stylesheet">
-</head>
+    <head>
+        <title>0hmyfood - A la française</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Setting the viewport to make your website look good on all devices-->
+        <link href="../fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
+        <link href="../scss/main.css" rel="stylesheet">
+    </head>
+    
+    <body onload="spinningLoader()">
+        <div id="loader"></div>
 
-<body>
-<header>
-    <div>
-        <a href="../index.html">
-            <i>Icône flèche gauche</i>
-        </a>
-        <img src="../public/images/logo/ohmyfood@2x.svg" alt="Logo de l'entreprise Ohmyfood">
-    </div>
-    <div>
-        <img src="../public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Illustration d'un plat servie par ce restaurant">
-    </div>
-</header>
+        <div style="display:none;" id="pageContent" class="animate-bottom">
+            <header class="omf-header-menu">
+                <div class="omf-hader-menu__title">
+                    <a href="acceuil.html">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <img src="../public/images/logo/ohmyfood@2x.svg" alt="Logo de l'entreprise Ohmyfood">
+                </div>
+                <div class="omf-hader-menu__content">
+                    <img src="../public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Illustration d'un plat servie par ce restaurant">
+                </div>
+            </header>
 
-<section>
-    <div>
-        <h1>A la française</h1>
-        <i>Icône coeur</i>
-    </div>
-    <div>
-        <p>ENTREES</p>
-        <div>Trait vert</div>
-        <div>
-            <h2>Tartare de poulpe acidulé</h2>
-            <div>
-                <p>Aux zestes d'orange</p>
-                <b>25€</b>
-            </div>
-        </div>
-        <div>
-            <h2>Velouté de légumes d'antan</h2>
-            <div>
-                <p>Carotte, panais, topinambour</p>
-                <b>35€</b>
-            </div>
-        </div>
-        <div>
-            <h2>Soupe à l'oignon</h2>
-            <div>
-                <p>Revisitée</p>
-                <b>20€</b>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p>PLATS</p>
-        <div>Trait vert</div>
-        <div>
-            <h2>Coquilles Saint-Jacques</h2>
-            <div>
-                <p>Accompagnées d'une purée de panais</p>
-                <b>40€</b>
-            </div>
-        </div>
-        <div>
-            <h2>Magret de canard</h2>
-            <div>
-                <p>Et parmentier de pommes de terre</p>
-                <b>35€</b>
-            </div>
-        </div>
-        <div>
-            <h2>Pigeonneau d’Ille-et-Vilaine</h2>
-            <div>
-                <p>Sur son lit de gnocchis aux légumes</p>
-                <b>44€</b>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p>DESSERTS</p>
-        <div>Trait vert</div>
-        <div>
-            <h2>Pétales de violettes glacés</h2>
-            <div>
-                <p>Et purée de noisettes</p>
-                <b>18€</b>
-            </div>
-        </div>
-        <div>
-            <h2>Fondant au chocolat</h2>
-            <div>
-                <p>Revisité</p>
-                <b>22€</b>
-            </div>
-        </div>
-        <div>
-            <h2>Millefeuille croustillant</h2>
-            <div>
-                <p>Myrtilles et pâte d’amande</p>
-                <b>23€</b>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p>Commander</p>
-    </div>
-</section>
+            <div style="background-color: #eaeaea">
+                <section class="omf-section3">
+                    <div class="omf-section3__title">
+                        <h1>A la française</h1>
+                        <div class="heart-container">
+                            <div class="heart">
+                                <svg  viewBox="-5 -28 521.00002 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="omf-section3__title2">
+                        <div class="omf-section3__subtitle">
+                            <p>ENTREES</p>
+                            <span></span>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Tartare de poulpe acidulé</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Aux zestes d'orange</p>
+                                <b>25€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Velouté de légumes d'antan</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Carotte, panais, topinambour</p>
+                                <b>35€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Soupe à l'oignon</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Revisitée</p>
+                                <b>20€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="omf-section3__title2">
+                        <div class="omf-section3__subtitle">
+                            <p>PLATS</p>
+                            <span></span>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Coquilles Saint-Jacques</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Accompagnées d'une purée de panais</p>
+                                <b>40€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Magret de canard</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Et parmentier de pommes de terre</p>
+                                <b>35€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Sur son lit de gnocchis aux légumes</p>
+                                <b>44€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="omf-section3__title2">
+                        <div class="omf-section3__subtitle">
+                            <p>DESSERTS</p>
+                            <span></span>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Pétales de violettes glacés</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Et purée de noisettes</p>
+                                <b>18€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Fondant au chocolat</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Revisité</p>
+                                <b>22€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="omf-card-menu">
+                            <h3>Millefeuille croustillant</h3>
+                            <div class="omf-card-menu__content">
+                                <p>Myrtilles et pâte d’amande</p>
+                                <b>23€</b>
+                            </div>
+                            <div class="omf-section3__selected">
+                                <div class="selected">
+                                    <svg viewBox="0 0 30.262 30.262" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.131,0.002C6.773,0.002,0,6.777,0,15.13c0,8.358,6.773,15.13,15.131,15.13s15.131-6.771,15.131-15.13C30.262,6.777,23.488,0.002,15.131,0.002z M12.859,24.148c-0.34,0.336-0.887,0.336-1.223,0l-0.271-0.271l0,0l-0.295-0.293l-1.266-1.266l-0.02-0.029l-5.807-5.851c-0.338-0.336-0.338-0.887,0-1.22l1.83-1.83c0.34-0.339,0.883-0.339,1.221,0l5.225,5.262l10.98-10.982c0.336-0.337,0.883-0.337,1.219,0l1.83,1.832c0.338,0.336,0.338,0.885,0,1.221L12.859,24.148z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-<footer>
-    <img src="../public/images/logo/ohmyfood@2x.svg" alt="Logo de l'entreprise ohmyfood">
-    <div>
-        <i>Icône couverts</i>
-        <p>Proposer un restaurant</p>
-    </div>
-    <div>
-        <i>Icône poignée de mains</i>
-        <p>Devenir partenaire</p>
-    </div>
-    <p>Mentions légales</p>
-    <p>Contact</p>
-</footer>
-</body>
+                <div class="omf-button" style="margin-top: 0 !important;margin-bottom: 4.5em !important;">
+                    <p class="omf-button__content">Commander</p>
+                </div>
+
+                <footer class="omf-footer">
+                <img id="omf-footer__logo" src="../public/images/logo/ohmyfood@2x.svg" alt="Logo de l'entreprise ohmyfood">
+                <div class="omf-footer__text">
+                    <i class="fas fa-utensils"></i>
+                    <p>Proposer un restaurant</p>
+                </div>
+                <div class="omf-footer__text">
+                    <i class="fas fa-hands-helping fa-sm"></i>
+                    <p>Devenir partenaire</p>
+                </div>
+                <p>Mentions légales</p>
+                <p>Contact</p>
+            </footer>
+            </div>
+        </div>
+            
+        <script>
+                let animate;
+    
+                function spinningLoader() {
+                    animate = setTimeout(showPage, 1000);
+                }
+    
+                function showPage() {
+                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("pageContent").style.display = "block";
+                }
+            </script>
+    </body>
 </html>
