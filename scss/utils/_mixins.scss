@@ -44,3 +44,12 @@
   border: 2px solid $color-primary;
   margin-top: 0;
 }
+
+@mixin lag-appear-animation($lag-appear) {
+  @each $key, $value in $lag-appear {
+    &__#{$key} {
+      animation: appear-animation 800ms linear forwards;
+      animation-delay: $value;
+    }
+  }
+}

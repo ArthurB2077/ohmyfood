@@ -4,11 +4,13 @@
 .omf-card-menu {
   @include shadow-box(0.15);
   z-index: 0;
+  position: relative;
   flex-direction: column;
   margin: 1em auto 1em auto;
   height: 5em;
   border-radius: 1em;
-  animation: appear-animation 1000ms linear;
+  opacity: 0;
+  @include lag-appear-animation($lag-appear);
   &:hover {
     & > .omf-section3__selected {
       transform: scaleX(1);
@@ -73,7 +75,7 @@
 
 @keyframes appear-animation {
   from {
-    bottom:-200px;
+    bottom:-50px;
     opacity:0;
   }
   to {
