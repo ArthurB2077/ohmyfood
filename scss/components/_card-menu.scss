@@ -25,7 +25,15 @@
         transform: translate(-80px, 0);
       }
       & > p {
-        width: 200px;
+        animation: overflow 500ms linear forwards;
+      }
+    }
+  }
+  &:not(:hover) {
+
+    & > .omf-card-menu__content {
+      & > p {
+        animation: overflow-reverse 1000ms linear forwards;
       }
     }
   }
@@ -70,7 +78,6 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      transition: width 750ms ease-out;
       text-align: left;
     }
     b {
@@ -89,5 +96,23 @@
   to {
     bottom:0;
     opacity:1;
+  }
+}
+
+@keyframes overflow {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 200px;
+  }
+}
+
+@keyframes overflow-reverse {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 100%;
   }
 }
