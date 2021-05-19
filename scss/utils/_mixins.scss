@@ -24,15 +24,15 @@
     margin-top: 2.5em;
   }
   .omf-section__list-cards {
-    @include desktop-only {
+    @include media-queries(desktop) {
       display: flex;
       justify-content: space-evenly;
     };
   }
 }
 
-@mixin desktop-only {
-  @media screen and (min-width: map-get($breakpoints, desktop)) {
+@mixin media-queries ($device) {
+  @media screen and (min-width: map-get($breakpoints, $device)) {
     @content;
   }
 }

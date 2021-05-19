@@ -2,6 +2,10 @@
 
 .omf-section2__card-restaurant {
   @include shadow-box(0.15);
+  @include media-queries(desktop) {
+    width: 23em;
+    height: 18em;
+  }
   width: 22em;
   height: 15em;
   margin: 2em auto 2em auto;
@@ -16,6 +20,10 @@
     text-decoration: none;
   }
   .omf-section2__image {
+    @include media-queries(desktop) {
+      width: 23em;
+      height: 12em;
+    }
     width: 22em;
     height: 10em;
     object-fit: cover;
@@ -29,6 +37,9 @@
     padding: 8px 15px 8px 15px;
     border-radius: 3px;
     @include position(1,relative, 245px, -150px);
+    @include media-queries(desktop) {
+      @include position(1,relative, 260px, -180px);
+    }
   }
   .omf-section2__container{
     @include position(1,relative, 0, -60px);
@@ -42,11 +53,18 @@
   }
   h4 {
     color: black;
+    @include media-queries(desktop) {
+      font-size: 22px;
+    }
   }
-  i {
-    margin-left: 45%;
-    @include position(1,relative, 15px, 5px);
+  @include media-queries(desktop) {
+    svg {
+      @include position(1,relative, -40px, 5px);
+      width: 32px;
+      height: 32px;
+    }
   }
+
   p {
     color: black;
     padding: 15px 15px 0 15px;
@@ -54,5 +72,9 @@
     margin-bottom: 0;
     text-align: left;
     @include position(1,relative, 0, -55px);
+    @include media-queries(desktop) {
+      font-size: 20px;
+      margin-top: 10px;
+    }
   }
 }

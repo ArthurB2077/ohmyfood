@@ -11,6 +11,6 @@ $text-color-secondary: black;
 
 $icon-size:24px;
 
-$lag-appear: (1:0ms,2:350ms,3:700ms,4:1050ms,5:1400ms,6:1750ms,7:2100ms,8:2450ms,9:2800ms);
+$lag-appear: (1:0ms,2:350ms,3:700ms,4:1050ms,5:1400ms,6:1750ms,7:2100ms,8:2450ms,9:2800ms,10:3150ms);
 
-$breakpoints: (desktop: 1200px);
+$breakpoints: (desktop: 1600px, tablette-lg:1200, tablette-sm:700px, mobile-lg: 550px, mobile-md:380px, mobile-sm:270);

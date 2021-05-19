@@ -4,5 +4,8 @@
   @include section-list;
   h2 {
     text-align: left;
+    @include media-queries(desktop) {
+      font-size: 32px;
+    }
   }
 }
