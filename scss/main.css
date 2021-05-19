@@ -319,9 +319,12 @@ body .title {
   height: 15em;
   margin: 2em auto 2em auto;
   border-radius: 20px;
+  transform: scale(1);
+  transition: transform 300ms linear;
 }
 .omf-section2__card-restaurant:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 .omf-section2__card-restaurant a {
   text-decoration: none;
@@ -504,12 +507,12 @@ body .title {
 .heart-container .heart path {
   fill: transparent;
   stroke: black;
-  stroke-width: 15px;
+  stroke-width: 30px;
   stroke-dasharray: 1560;
   stroke-dashoffset: 0;
 }
 .heart-container .heart path:hover {
-  animation: heart-fill 2s linear forwards;
+  animation: heart-fill 1000ms linear forwards;
 }
 
 @keyframes heart-fill {
