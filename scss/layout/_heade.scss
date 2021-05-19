@@ -1,6 +1,9 @@
 @import "../utils/mixins";
 
 .omf-header {
+  @include media-queries(desktop) {
+    font-size: 22px;
+  }
   .omf-header__title {
     @include center-element(4em);
     @include shadow-box(0.15);
