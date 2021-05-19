@@ -93,9 +93,12 @@ body {
   color: white;
   padding: 2em;
 }
-.omf-footer #omf-footer__logo {
+.omf-footer svg {
   fill: white;
   margin-bottom: 15px;
+}
+.omf-footer svg path {
+  fill: white;
 }
 .omf-footer .omf-footer__text {
   display: flex;

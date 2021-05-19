@@ -4,9 +4,12 @@
   background-color: $bg-color-tertiary;
   color: $text-color-primary;
   padding: 2em;
-  #omf-footer__logo {
+  svg {
     fill: $text-color-primary;
     margin-bottom: 15px;
+    path {
+      fill: $text-color-primary;
+    }
   }
   .omf-footer__text {
     display: flex;
