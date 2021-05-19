@@ -36,3 +36,11 @@
     @content;
   }
 }
+
+@mixin greenline {
+  display: flex;
+  width: 3em;
+  height: 0;
+  border: 2px solid $color-primary;
+  margin-top: 0;
+}
