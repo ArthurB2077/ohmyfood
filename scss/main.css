@@ -92,10 +92,13 @@ body {
   background-color: #353535;
   color: white;
   padding: 2em;
+  text-align: left;
 }
 .omf-footer svg {
+  width: 130px;
+  height: 35px;
   fill: white;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .omf-footer svg path {
   fill: white;
