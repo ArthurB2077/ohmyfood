@@ -4,9 +4,12 @@
   background-color: $bg-color-tertiary;
   color: $text-color-primary;
   padding: 2em;
+  text-align: left;
   svg {
+    width:130px;
+    height:35px;
     fill: $text-color-primary;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     path {
       fill: $text-color-primary;
     }
