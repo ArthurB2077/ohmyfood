@@ -14,6 +14,11 @@
   &:hover {
     & > .omf-section3__selected {
       transform: scaleX(1);
+      .selected {
+        svg {
+          transform: rotate(360deg);
+        }
+      }
     }
     & > .omf-card-menu__content {
       & > b {
@@ -41,6 +46,9 @@
         fill: $text-color-primary;
         margin: auto;
         overflow: hidden;
+        svg {
+          transition: transform 400ms ease-out 150ms;
+        }
     }
   }
   h3 {

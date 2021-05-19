@@ -581,6 +581,9 @@ body .title {
 .omf-card-menu:hover > .omf-section3__selected {
   transform: scaleX(1);
 }
+.omf-card-menu:hover > .omf-section3__selected .selected svg {
+  transform: rotate(360deg);
+}
 .omf-card-menu:hover > .omf-card-menu__content > b {
   transform: translate(-80px, 0);
 }
@@ -608,6 +611,9 @@ body .title {
   fill: white;
   margin: auto;
   overflow: hidden;
+}
+.omf-card-menu .omf-section3__selected .selected svg {
+  transition: transform 400ms ease-out 150ms;
 }
 .omf-card-menu h3 {
   padding: 15px 15px 0 15px;
