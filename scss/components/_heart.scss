@@ -4,9 +4,9 @@
   position: relative;
   top: 3px;
   left: -25px;
-  .icon {
-    width:24px;
-    height:24px;
+  .heart {
+    width:$icon-size;
+    height:$icon-size;
     path {
       fill: transparent;
       stroke: $text-color-secondary;

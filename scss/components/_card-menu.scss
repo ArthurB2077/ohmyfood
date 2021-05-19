@@ -1,0 +1,83 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.omf-card-menu {
+  @include shadow-box(0.15);
+  z-index: 0;
+  flex-direction: column;
+  margin: 1em auto 1em auto;
+  height: 5em;
+  border-radius: 1em;
+  animation: appear-animation 1000ms linear;
+  &:hover {
+    & > .omf-section3__selected {
+      transform: scaleX(1);
+    }
+    & > .omf-card-menu__content {
+      & > b {
+        transform: translate(-80px, 0);
+      }
+      & > p {
+        width: 200px;
+      }
+    }
+  }
+  .omf-section3__selected {
+    @include position(1, relative, 294px,-37px);
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: $color-primary;
+    width: 20%;
+    height: 100%;
+    transform: scaleX(0);
+    transition: transform 750ms linear;
+    transform-origin: right;
+      .selected {
+        display: inherit;
+        width:$icon-size;
+        height:$icon-size;
+        fill: $text-color-primary;
+        margin: auto;
+        overflow: hidden;
+    }
+  }
+  h3 {
+    padding: 15px 15px 0 15px;
+    margin: 0;
+    text-align: left;
+  }
+  .omf-card-menu__content {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    float: left;
+    padding: 10px 15px 0 15px;
+    width: 100%;
+    justify-content: space-between;
+    p {
+      margin: 0;
+      font-weight: lighter;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: width 750ms ease-out;
+      text-align: left;
+    }
+    b {
+      margin-right: 15px;
+      transition: transform 750ms linear;
+    }
+  }
+  }
+
+
+@keyframes appear-animation {
+  from {
+    bottom:-200px;
+    opacity:0;
+  }
+  to {
+    bottom:0;
+    opacity:1
+  }
+}

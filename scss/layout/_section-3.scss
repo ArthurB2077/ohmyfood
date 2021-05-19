@@ -19,4 +19,18 @@
       margin-right: 3em;
     }
   }
+  .omf-section3__title2 {
+    margin: 3em 1.5em auto 1.5em;
+    .omf-section3__subtitle {
+      margin: auto;
+      p {
+        text-align: left;
+        margin-bottom: 5px;
+        font-size: 1.2em;
+      }
+      span {
+        @include greenline;
+      }
+    }
+  }
 }

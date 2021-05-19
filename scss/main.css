@@ -199,6 +199,24 @@ body .title {
   font-weight: normal;
   margin-right: 3em;
 }
+.omf-section3 .omf-section3__title2 {
+  margin: 3em 1.5em auto 1.5em;
+}
+.omf-section3 .omf-section3__title2 .omf-section3__subtitle {
+  margin: auto;
+}
+.omf-section3 .omf-section3__title2 .omf-section3__subtitle p {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+.omf-section3 .omf-section3__title2 .omf-section3__subtitle span {
+  display: flex;
+  width: 3em;
+  height: 0;
+  border: 2px solid #99E2D0;
+  margin-top: 0;
+}
 
 .omf-button {
   border-radius: 3em;
@@ -466,18 +484,18 @@ body .title {
   top: 3px;
   left: -25px;
 }
-.heart-container .icon {
+.heart-container .heart {
   width: 24px;
   height: 24px;
 }
-.heart-container .icon path {
+.heart-container .heart path {
   fill: transparent;
   stroke: black;
   stroke-width: 15px;
   stroke-dasharray: 1560;
   stroke-dashoffset: 0;
 }
-.heart-container .icon path:hover {
+.heart-container .heart path:hover {
   animation: heart-fill 2s linear forwards;
 }
 
@@ -496,6 +514,84 @@ body .title {
     stroke-dashoffset: 3120;
     fill: #FF79DA;
     stroke: transparent;
+  }
+}
+.omf-card-menu {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  z-index: 0;
+  flex-direction: column;
+  margin: 1em auto 1em auto;
+  height: 5em;
+  border-radius: 1em;
+  animation: appear-animation 1000ms linear;
+}
+.omf-card-menu:hover > .omf-section3__selected {
+  transform: scaleX(1);
+}
+.omf-card-menu:hover > .omf-card-menu__content > b {
+  transform: translate(-80px, 0);
+}
+.omf-card-menu:hover > .omf-card-menu__content > p {
+  width: 200px;
+}
+.omf-card-menu .omf-section3__selected {
+  z-index: 1;
+  position: relative;
+  left: 294px;
+  top: -37px;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background-color: #99E2D0;
+  width: 20%;
+  height: 100%;
+  transform: scaleX(0);
+  transition: transform 750ms linear;
+  transform-origin: right;
+}
+.omf-card-menu .omf-section3__selected .selected {
+  display: inherit;
+  width: 24px;
+  height: 24px;
+  fill: white;
+  margin: auto;
+  overflow: hidden;
+}
+.omf-card-menu h3 {
+  padding: 15px 15px 0 15px;
+  margin: 0;
+  text-align: left;
+}
+.omf-card-menu .omf-card-menu__content {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  float: left;
+  padding: 10px 15px 0 15px;
+  width: 100%;
+  justify-content: space-between;
+}
+.omf-card-menu .omf-card-menu__content p {
+  margin: 0;
+  font-weight: lighter;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: width 750ms ease-out;
+  text-align: left;
+}
+.omf-card-menu .omf-card-menu__content b {
+  margin-right: 15px;
+  transition: transform 750ms linear;
+}
+
+@keyframes appear-animation {
+  from {
+    bottom: -200px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
   }
 }
 
