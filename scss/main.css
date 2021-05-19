@@ -73,6 +73,9 @@ body {
     justify-content: space-evenly;
   }
 }
+.omf-section1 h2 {
+  text-align: left;
+}
 
 .omf-section2 {
   border-spacing: 2em;
@@ -86,6 +89,9 @@ body {
     display: flex;
     justify-content: space-evenly;
   }
+}
+.omf-section2 h2 {
+  text-align: left;
 }
 
 .omf-footer {
@@ -366,6 +372,7 @@ body .title {
   padding: 15px 15px 0 15px;
   margin-top: 0;
   margin-bottom: 0;
+  text-align: left;
   z-index: 1;
   position: relative;
   left: 0;
