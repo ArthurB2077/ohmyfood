@@ -2,10 +2,14 @@
 
 .omf-section2__card-restaurant {
   @include shadow-box(0.15);
-  @include media-queries(desktop) {
-    width: 23em;
-    height: 18em;
-  }
+  @include media-queries(tablette) {
+    margin: 1.5em !important;
+  };
+  @include media-queries(mobile-sm) {
+    margin: 1.5em !important;
+    width: 220px;
+    height: 150px;
+  };
   width: 22em;
   height: 15em;
   margin: 2em auto 2em auto;
@@ -20,10 +24,10 @@
     text-decoration: none;
   }
   .omf-section2__image {
-    @include media-queries(desktop) {
-      width: 23em;
-      height: 12em;
-    }
+    @include media-queries(mobile-sm) {
+      width: 220px;
+      height: 100px;
+    };
     width: 22em;
     height: 10em;
     object-fit: cover;
@@ -31,18 +35,23 @@
     z-index: 0;
   }
   .omf-section2__modal {
+    @include position(1,relative, 245px, -150px);
+    @include media-queries(mobile-sm) {
+      @include position(1,relative, 160px, -95px);
+      padding: 3px 6px 3px 6px;
+      font-size: 10px;
+    };
     background-color: $color-primary;
     color: darken($color-primary, 40%);
     width: fit-content;
     padding: 8px 15px 8px 15px;
     border-radius: 3px;
-    @include position(1,relative, 245px, -150px);
-    @include media-queries(desktop) {
-      @include position(1,relative, 260px, -180px);
-    }
   }
   .omf-section2__container{
     @include position(1,relative, 0, -60px);
+    @include media-queries(mobile-sm) {
+      @include position(1,relative, 0, -40px);
+    };
     padding: 15px;
     display: flex;
     align-items: baseline;
@@ -53,28 +62,25 @@
   }
   h4 {
     color: black;
-    @include media-queries(desktop) {
-      font-size: 22px;
-    }
+    @include media-queries(mobile-sm) {
+      font-size: 12px;
+    };
   }
-  @include media-queries(desktop) {
-    svg {
-      @include position(1,relative, -40px, 5px);
-      width: 32px;
-      height: 32px;
-    }
-  }
-
   p {
+    @include position(1,relative, 0, -55px);
+    @include media-queries(mobile-sm) {
+      font-size: 10px;
+      padding: 0 15px 0 15px;
+    };
     color: black;
     padding: 15px 15px 0 15px;
     margin-top: 0;
     margin-bottom: 0;
     text-align: left;
-    @include position(1,relative, 0, -55px);
-    @include media-queries(desktop) {
-      font-size: 20px;
-      margin-top: 10px;
-    }
   }
+  @include media-queries(mobile-sm) {
+    .omf-section2__new {
+      padding-top: 15px !important;
+    }
+  };
 }

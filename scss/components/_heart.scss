@@ -7,6 +7,10 @@
   .heart {
     width:$icon-size;
     height:$icon-size;
+    @include media-queries(mobile-sm) {
+      width:$icon-size-sm;
+      height:$icon-size-sm;
+    };
     path {
       fill: transparent;
       stroke: $text-color-secondary;
@@ -17,6 +21,42 @@
         animation: heart-fill 1000ms linear forwards;
       }
     }
+  }
+}
+
+.heart-card-1 {
+  top: 8px !important;
+  left: 160px !important;
+  @include media-queries(mobile-sm) {
+    top: 5px !important;
+    left: 80px !important;
+  };
+}
+
+.heart-card-2 {
+  top: 8px !important;
+  left: 157px !important;
+  @include media-queries(mobile-sm) {
+    top: 5px !important;
+    left: 77px !important;
+  }
+}
+
+.heart-card-3 {
+  top: 8px !important;
+  left: 192px !important;
+  @include media-queries(mobile-sm) {
+    top: 5px !important;
+    left: 102px !important;
+  }
+}
+
+.heart-card-4 {
+  top: 8px !important;
+  left: 158px !important;
+  @include media-queries(mobile-sm) {
+    top: 5px !important;
+    left: 78px !important;
   }
 }
 
