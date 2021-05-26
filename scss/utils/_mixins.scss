@@ -26,13 +26,23 @@
   .omf-section__list-cards {
     @include media-queries(desktop) {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
+    };
+    @include media-queries(tablette) {
+      display: flex;
+      justify-content: space-evenly !important;
+      flex-wrap: wrap;
+    };
+    @include media-queries(mobile-sm) {
+      display: flex;
+      justify-content: center !important;
+      flex-wrap: wrap;
     };
   }
 }
 
 @mixin media-queries ($device) {
-  @media screen and (min-width: map-get($breakpoints, $device)) {
+  @media all and (min-width: map-get($breakpoints-min, $device)) and (max-width: map-get($breakpoints-max, $device)) {
     @content;
   }
 }

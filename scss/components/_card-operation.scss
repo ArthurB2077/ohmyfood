@@ -3,11 +3,15 @@
 .omf-section1__card_operation {
   @include center-element(1em);
   @include shadow-box(0.05);
-  @include media-queries(desktop) {
-    width: 400px;
-    height: 120px;
-
-  }
+  @include media-queries(tablette) {
+    margin: 1.5em !important;
+  };
+  @include media-queries(mobile-sm) {
+    margin: 1.5em !important;
+    width: 220px;
+    height: 50px;
+    border-radius: 0.75em;
+  };
   border-radius: 1em;
   background-color: $bg-color-secondary;
   width: 22em;
@@ -19,12 +23,12 @@
     background: lighten($color-tertiary, 30%);
   }
   .omf-section1__numbercircle {
-    @include position(1, relative,-0.7em,1.8em );
-    @include media-queries(desktop) {
-      @include position(1, relative, -15px, 46px);
-      height: 30px;
-      width: 30px;
-    }
+    @include position(1, relative, -0.7em, 1.8em);
+    @include media-queries(mobile-sm) {
+      @include position(1, relative, -0.7em, 1em);
+      height: 20px;
+      width: 20px;
+    };
     display: flex;
     justify-content: center;
     background-color: $color-tertiary;
@@ -36,27 +40,27 @@
   p {
     @include center-element(1em);
     font-size: 20px;
-    @include media-queries(desktop) {
-      font-size: 25px;
-    }
+    @include media-queries(mobile-sm) {
+      font-size: 12px;
+    };
   }
   span {
     @include center-element(10px);
-    @include media-queries(desktop) {
-      font-size: 15px;
-      align-items: baseline;
-    }
     font-size: 10px;
     align-items: baseline;
+    @include media-queries(mobile-sm) {
+      font-size: 8px;
+    };
   }
   i {
     @include position(1, relative, 1.2em, 1.5em );
-    @include media-queries(desktop) {
-      @include position(1, relative, 12px, 48px);
-      font-size: 32px;
-    }
+    @include media-queries(mobile-sm) {
+      font-size: 15px;
+      @include position(1, relative, 0.8em, 1.3em );
+    };
   }
   .fa-mobile-alt {
-    margin-right: 25px;
+    margin-right: 16px;
+
   }
 }
