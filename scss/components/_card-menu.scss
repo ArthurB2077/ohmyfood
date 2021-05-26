@@ -3,14 +3,14 @@
 
 .omf-card-menu {
   @include shadow-box(0.15);
+  @include lag-appear-animation($lag-appear);
   z-index: 0;
   position: relative;
   flex-direction: column;
   margin: 1em auto 1em auto;
-  height: 5em;
+  height: 80px;
   border-radius: 1em;
   opacity: 0;
-  @include lag-appear-animation($lag-appear);
   &:hover {
     & > .omf-section3__selected {
       transform: scaleX(1);
@@ -22,10 +22,10 @@
     }
     & > .omf-card-menu__content {
       & > b {
-        transform: translate(-80px, 0);
+        transform: translate(-250%, 0);
       }
       & > p {
-        animation: overflow 500ms linear forwards;
+        animation: overflow 700ms linear forwards;
       }
     }
   }
@@ -33,12 +33,15 @@
 
     & > .omf-card-menu__content {
       & > p {
-        animation: overflow-reverse 1000ms linear forwards;
+        animation: overflow-reverse 700ms ease-in forwards ;
       }
     }
   }
   .omf-section3__selected {
-    @include position(1, relative, 294px,-37px);
+    @include position(1, relative, 80%, -46%);
+    @include media-queries(mobile-sm) {
+      @include position(1, relative, 80%, -38%);
+    }
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
     background-color: $color-primary;
@@ -63,6 +66,9 @@
     padding: 15px 15px 0 15px;
     margin: 0;
     text-align: left;
+    @include media-queries(mobile-sm) {
+      font-size: 13px;
+    }
   }
   .omf-card-menu__content {
     display: flex;
@@ -79,10 +85,19 @@
       overflow: hidden;
       text-overflow: ellipsis;
       text-align: left;
+      @include media-queries(mobile-sm) {
+        font-size: 13px;
+      }
     }
     b {
-      margin-right: 15px;
-      transition: transform 750ms linear;
+      transition: transform 680ms linear;
+      width: 10%;
+      @include media-queries(desktop) {
+        width: 7%;
+      }
+      @include media-queries(mobile-sm) {
+        font-size: 13px;
+      }
     }
   }
   }
@@ -104,13 +119,13 @@
     width: 100%;
   }
   to {
-    width: 200px;
+    width: 60%;
   }
 }
 
 @keyframes overflow-reverse {
   from {
-    width: 200px;
+    width: 60%;
   }
   to {
     width: 100%;

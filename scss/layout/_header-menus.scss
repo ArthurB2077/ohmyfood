@@ -6,6 +6,9 @@
     margin-top: 1em;
     margin-bottom: 1em;
     a {
+      @include media-queries(mobile-sm) {
+        margin-right: 15%;
+      }
       color: $text-color-secondary;
       text-decoration: none;
       margin-right: 25% ;
@@ -13,6 +16,9 @@
     }
     img {
       margin-right: 30%;
+      @include media-queries(mobile-sm) {
+        margin-right: 15%;
+      }
     }
   }
   .omf-hader-menu__content {
