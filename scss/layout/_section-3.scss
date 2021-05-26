@@ -17,6 +17,9 @@
       font-size: 28px;
       font-weight: normal;
       margin-right: 3em;
+      @include media-queries(mobile-sm) {
+        font-size: 17px;
+      }
     }
   }
   .omf-section3__title2 {
@@ -27,6 +30,9 @@
         text-align: left;
         margin-bottom: 5px;
         font-size: 1.2em;
+        @include media-queries(mobile-sm) {
+          font-size: 17px;
+        }
       }
       span {
         @include greenline;

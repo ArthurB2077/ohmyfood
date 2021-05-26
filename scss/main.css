@@ -222,8 +222,18 @@ body {
   margin-right: 25%;
   margin-left: 0;
 }
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-header-menu .omf-hader-menu__title a {
+    margin-right: 15%;
+  }
+}
 .omf-header-menu .omf-hader-menu__title img {
   margin-right: 30%;
+}
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-header-menu .omf-hader-menu__title img {
+    margin-right: 15%;
+  }
 }
 .omf-header-menu .omf-hader-menu__content img {
   height: 20em;
@@ -288,6 +298,11 @@ body .title {
   font-weight: normal;
   margin-right: 3em;
 }
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-section3 .omf-section3__title h1 {
+    font-size: 17px;
+  }
+}
 .omf-section3 .omf-section3__title2 {
   margin: 3em 1.5em auto 1.5em;
 }
@@ -298,6 +313,11 @@ body .title {
   text-align: left;
   margin-bottom: 5px;
   font-size: 1.2em;
+}
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-section3 .omf-section3__title2 .omf-section3__subtitle p {
+    font-size: 17px;
+  }
 }
 .omf-section3 .omf-section3__title2 .omf-section3__subtitle span {
   display: flex;
@@ -753,7 +773,7 @@ body .title {
   position: relative;
   flex-direction: column;
   margin: 1em auto 1em auto;
-  height: 5em;
+  height: 80px;
   border-radius: 1em;
   opacity: 0;
 }
@@ -804,19 +824,19 @@ body .title {
   transform: rotate(360deg);
 }
 .omf-card-menu:hover > .omf-card-menu__content > b {
-  transform: translate(-80px, 0);
+  transform: translate(-250%, 0);
 }
 .omf-card-menu:hover > .omf-card-menu__content > p {
-  animation: overflow 500ms linear forwards;
+  animation: overflow 700ms linear forwards;
 }
 .omf-card-menu:not(:hover) > .omf-card-menu__content > p {
-  animation: overflow-reverse 1000ms linear forwards;
+  animation: overflow-reverse 700ms ease-in forwards;
 }
 .omf-card-menu .omf-section3__selected {
   z-index: 1;
   position: relative;
-  left: 294px;
-  top: -37px;
+  left: 80%;
+  top: -46%;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   background-color: #99E2D0;
@@ -825,6 +845,14 @@ body .title {
   transform: scaleX(0);
   transition: transform 750ms linear;
   transform-origin: right;
+}
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-card-menu .omf-section3__selected {
+    z-index: 1;
+    position: relative;
+    left: 80%;
+    top: -38%;
+  }
 }
 .omf-card-menu .omf-section3__selected .selected {
   display: inherit;
@@ -841,6 +869,11 @@ body .title {
   padding: 15px 15px 0 15px;
   margin: 0;
   text-align: left;
+}
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-card-menu h3 {
+    font-size: 13px;
+  }
 }
 .omf-card-menu .omf-card-menu__content {
   display: flex;
@@ -859,9 +892,24 @@ body .title {
   text-overflow: ellipsis;
   text-align: left;
 }
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-card-menu .omf-card-menu__content p {
+    font-size: 13px;
+  }
+}
 .omf-card-menu .omf-card-menu__content b {
-  margin-right: 15px;
-  transition: transform 750ms linear;
+  transition: transform 680ms linear;
+  width: 10%;
+}
+@media all and (min-width: 1600px) and (max-width: 2200px) {
+  .omf-card-menu .omf-card-menu__content b {
+    width: 7%;
+  }
+}
+@media all and (min-width: 250px) and (max-width: 389px) {
+  .omf-card-menu .omf-card-menu__content b {
+    font-size: 13px;
+  }
 }
 
 @keyframes appear-animation {
@@ -879,12 +927,12 @@ body .title {
     width: 100%;
   }
   to {
-    width: 200px;
+    width: 60%;
   }
 }
 @keyframes overflow-reverse {
   from {
-    width: 200px;
+    width: 60%;
   }
   to {
     width: 100%;
