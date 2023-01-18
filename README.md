@@ -5,4 +5,4 @@ Le projet consiste à transformer et dynamiser une maquette en application mobil
 
 Fabriqué avec :Sass - Préprocesseur CSS, Webstorm - Editeur de textes
 
-Auteur : Arthur Béquié - arthurbequie@gmail.com
+Auteur : Arthur Béquié
